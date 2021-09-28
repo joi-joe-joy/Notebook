@@ -1,0 +1,56 @@
+{
+  "name": "notebook-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
+    "final": "nodemon final/index.js",
+    "seed": "node final/util/seed/index.js",
+    "lint": "eslint \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joi-joe-joy/Notebook.git"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**.test.js"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joi-joe-joy/Notebook/issues"
+  },
+  "homepage": "https://github.com/joi-joe-joy/Notebook#readme",
+  "dependencies": {
+    "apollo-server-express": "3.3.0",
+    "bcrypt": "5.0.1",
+    "cors": "2.8.5",
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "express-session": "1.17.2",
+    "graphql": "15.6.0",
+    "graphql-depth-limit": "1.1.0",
+    "graphql-iso-date": "3.6.1",
+    "graphql-validation-complexity": "0.4.2",
+    "helmet": "4.6.0",
+    "jsonwebtoken": "8.5.1",
+    "marked": "3.0.4",
+    "md5": "2.3.0",
+    "mongoose": "6.0.8",
+    "nodemon": "2.0.13",
+    "passport": "0.5.0",
+    "passport-github2": "0.1.12"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "faker": "5.5.3",
+    "node-fetch": "3.0.0",
+    "prettier": "2.4.1"
+  }
+}
