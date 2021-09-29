@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/joi-joe-joy/Notebook#readme",
   "dependencies": {
-    "apollo-server-express": "3.3.0",
+    "apollo-server-express": "2.25.2",
     "bcrypt": "5.0.1",
     "cors": "2.8.5",
     "dotenv": "10.0.0",
