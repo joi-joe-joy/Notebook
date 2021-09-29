@@ -5,6 +5,14 @@ const {
 module.exports = gql `
     scalar DateTime
 
+    type User {
+        id: ID!
+        username: String!
+        email: String!
+        avatar: String
+        notes: [Note!]!
+    }
+
     type Note {
         id: ID!
         content: String!
@@ -20,6 +28,8 @@ module.exports = gql `
     }
 
     type Mutation {
+        signUp(username: String!, email: String!, password: String!): String!
+        signIn(username: String, email: String, password: String!): String!
         newNote(content: String!): Note!
         updateNote(id: ID!, content: String!): Note!
         deleteNote(id: ID!): Boolean
