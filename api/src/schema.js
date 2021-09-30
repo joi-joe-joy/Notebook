@@ -11,20 +11,25 @@ module.exports = gql `
         email: String!
         avatar: String
         notes: [Note!]!
+        favorites: [Note!]!
     }
 
     type Note {
         id: ID!
         content: String!
-        author: String!
+        author: User!
         createdAt: DateTime!
         updatedAt: DateTime!
+        favoriteCount: Int!
+        favoritedBy: [User!]
     }
 
     type Query {
-        hello: String
         notes: [Note!]!
         note(id: ID): Note!
+        user(username: String!): User
+        users: [User!]!
+        me: User!
     }
 
     type Mutation {
@@ -33,5 +38,6 @@ module.exports = gql `
         newNote(content: String!): Note!
         updateNote(id: ID!, content: String!): Note!
         deleteNote(id: ID!): Boolean
+        toggleFavorite(id: ID!): Note!
     }
 `;
