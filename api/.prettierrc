@@ -1,3 +1,6 @@
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "requirePragma": false,
+  "semi": false,
+  "useTabs": true
 }
